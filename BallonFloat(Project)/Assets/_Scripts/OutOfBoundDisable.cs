@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public sealed class OutOfBoundDestroy : MonoBehaviour
+public sealed class OutOfBoundDisable : MonoBehaviour
 {
     private const float bound = -15;
 
@@ -10,6 +10,6 @@ public sealed class OutOfBoundDestroy : MonoBehaviour
     {
         float currentXPos = transform.position.x;
         if (currentXPos <= bound)
-            Destroy(gameObject);
+            gameObject.SetActive(false);
     }
 }
